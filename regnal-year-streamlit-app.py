@@ -14,7 +14,7 @@ def parse_date(date_str):
     return datetime.datetime.strptime(date_str, '%d/%m/%Y')
 
 def calculate_regnal_year(input_date):
-    """Calculate regnal year based on input date."""
+    """Calculate regnal year based on input Gregorian date."""
     john_data = load_csv('john.csv')
     kings_data = load_csv('rgnl1.csv')
 
@@ -120,10 +120,10 @@ def main():
     st.title("British Monarchy Regnal Year Calculator")
 
     # Tabs for different functionalities
-    tab1, tab2 = st.tabs(["Calculate Regnal Year", "Find Date Range"])
+    tab1, tab2 = st.tabs(["Gregorian to Regnal Year", "Regnal Year to Gregorian"])
 
     with tab1:
-        st.header("Calculate Regnal Year for a Date")
+        st.header("Calculate Regnal Year for a Gregorian Date")
         col1, col2, col3 = st.columns(3)
         
         with col1:
@@ -133,7 +133,7 @@ def main():
         with col3:
             day = st.number_input("Day", min_value=1, max_value=31, value=1)
 
-        if st.button("Calculate Regnal Year"):
+        if st.button("Calculate Regnal Year for a Gregorian Date"):
             try:
                 input_date = datetime.datetime(year, month, day)
                 result = calculate_regnal_year(input_date)
@@ -154,9 +154,9 @@ def main():
     # Additional information
     st.markdown("""
     ### Instructions
-    - For the first tab, enter a date to find its regnal year
+    - For the first tab, enter a Gregorian date to find its regnal year
     - For the second tab, enter a monarch's name and their regnal year
-    - Dates must be between 1066 and 2072
+    - Dates must be between 1066 (and all that) and 2072
     - Use full monarch names with Roman numerals (e.g., 'Elizabeth II')
     """)
 
