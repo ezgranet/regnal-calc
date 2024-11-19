@@ -117,7 +117,7 @@ def calculate_date_range(monarch, regnal_year):
     return "Monarch not found"
 
 def main():
-    st.title("British Monarchy Regnal Year Calculator")
+    st.title("Regnal Year Calculator")
 
     # Tabs for different functionalities
     tab1, tab2 = st.tabs(["Gregorian to Regnal Year", "Regnal Year to Gregorian"])
