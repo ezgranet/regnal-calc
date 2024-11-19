@@ -158,6 +158,7 @@ def main():
     - For the second tab, enter a monarch's name and their regnal year
     - Dates must be between 1066 (and all that) and 2072
     - Use full monarch names with Roman numerals (e.g., 'Elizabeth II')
+    - If something is broken or you just want to say something, get in touch with me, Elijah Granet, via e-mail [by clicking this link](mailto:&#101;&#100;&#105;&#116;&#111;&#114;&#64;&#108;&#101;&#103;&#97;&#108;&#115;&#116;&#121;&#108;&#101;&#46;&#99;&#111;&#46;&#117;&#107;)	
     """)
 
 if __name__ == "__main__":
