@@ -35,7 +35,7 @@ def calculate_regnal_year(input_date):
                 return f"{row[0]} (John)"
 
     # Check other monarchs
-    if parse_date('20/10/1216') <= input_date <= parse_date('12/10/2072'):
+    if parse_date('14/10/1066') <= input_date <= parse_date('12/10/2072'):
         for row in kings_data:
             start_date = parse_date(row[1])
             if start_date <= input_date <= parse_date(row[2]):
